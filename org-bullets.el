@@ -101,9 +101,8 @@ Should this be undesirable, one can remove them with
                                         org-bullets-face-name))
                    (put-text-property (match-beginning 0)
                                       (- (match-end 0) 2)
-                                      'face (list :foreground
-                                                  (face-attribute
-                                                   'default :background)))
+                                      'face (list :foreground (face-attribute 'org-hide :foreground)
+                                                  :background (face-attribute 'org-hide :background)))
                    (put-text-property (match-beginning 0)
                                       (match-end 0)
                                       'keymap
